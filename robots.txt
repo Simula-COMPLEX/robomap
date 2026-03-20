@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://simula-complex.github.io/robomap/
+
+# Sitemap
+Sitemap: https://simula-complex.github.io/robomap/sitemap.xml

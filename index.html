@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Software Engineering for Self-Adaptive Robotics | Interactive Research Agenda</title>
+    <meta name="title" content="Software Engineering for Self-Adaptive Robotics | Interactive Research Agenda">
+    <meta name="description" content="Explore an interactive mapping of 50+ challenges in self-adaptive robotics (SAR). Analyzing MAPE-K loops, quality aspects, and SAR characteristics based on the 2025 research agenda by Hassan Sartaj et al.">
+    <meta name="keywords" content="Self-Adaptive Robotics, Software Engineering, MAPE-K, Robotic Challenges, Research Agenda, Safety-Critical Systems, Autonomous Robots, AI in Robotics, Digital Twins">
+    <meta name="author" content="Hassan Sartaj, Shaukat Ali, Ana Cavalcanti, Lukas Esterle, et al.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://simula-complex.github.io/robomap/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simula-complex.github.io/robomap/">
+    <meta property="og:title" content="Interactive Research Agenda: Self-Adaptive Robotics Challenges">
+    <meta property="og:description" content="A systematic mapping of challenges in self-adaptive robotics to quality aspects and system characteristics.">
+    <meta property="og:site_name" content="SAR Research Agenda">
+
+    <meta name="citation_title" content="Software Engineering for Self-Adaptive Robotics: A Research Agenda">
+    <meta name="citation_author" content="Sartaj, Hassan">
+    <meta name="citation_author" content="Ali, Shaukat">
+    <meta name="citation_author" content="Cavalcanti, Ana">
+    <meta name="citation_author" content="Esterle, Lukas">
+    <meta name="citation_author" content="Gomes, Claudio">
+    <meta name="citation_author" content="Larsen, Peter Gorm">
+    <meta name="citation_author" content="Tefas, Anastasios">
+    <meta name="citation_author" content="Woodcock, Jim">
+    <meta name="citation_author" content="Zhang, Houxiang">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025/05/19">
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2505.19629">
+    <meta name="citation_arxiv_id" content="2505.19629">
+    <meta name="citation_language" content="en">
+
+    <link rel="icon" href="images/robo-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <h1>Software Engineering for Self-Adaptive Robotics</h1>
+        <h2>A Research Agenda</h2>
+
+
+        <div class="intro-card">
+            
+            <p class="intro-text">
+                This page presents an extended version of <strong>Table 1</strong> and <strong>Table 2</strong> from the research paper listed below. 
+                <strong>Table 1</strong> provides a detailed analysis of cross-cutting quality aspects for all challenges identified across the software engineering lifecycle (Requirements Engineering, Software Design, Software Development, Software Testing, and Operations) and enabling technologies (Digital Twins and Artificial Intelligence) for self-adaptive robotics. 
+                <strong>Table 2</strong> maps self-adaptive robotics characteristics to all challenges across both the software engineering lifecycle and the enabling technologies. 
+                For a full description of the analysis and results, please refer to the paper below.
+            </p>
+
+            <div class="citation-box" id="academic-ref">
+                <div class="cite-header">
+                    <span class="cite-label">Reference Research Paper</span>
+                    <button class="copy-btn" onclick="copyBibTeX()">Copy BibTeX</button>
+                </div>
+                <p>
+                    Hassan Sartaj, Shaukat Ali, Ana Cavalcanti, Lukas Esterle, Cláudio Gomes, Peter Gorm Larsen, Anastasios Tefas, Jim Woodcock, Houxiang Zhang, 
+                    "<strong>Software Engineering for Self-Adaptive Robotics: A Research Agenda</strong>," 
+                    <em>arXiv preprint arXiv:2505.19629</em>, 2025.
+                </p>
+                <div class="ref-links">
+                    <a href="https://arxiv.org/abs/2505.19629" target="_blank" class="paper-link">📄 View on arXiv</a>
+                    <a href="https://arxiv.org/pdf/2505.19629" target="_blank" class="paper-link">📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="search-container">
+        <input type="text" id="tableSearch" placeholder="Search by ID, Description, or Topic...">
+    </div>
+
+    <hr class="section-divider"> 
+    <figure class="table-container">
+        <figcaption class="table-caption">
+            <strong>Table 1:</strong> Mapping of challenges in self-adaptive robotics (SAR) to cross-cutting quality aspects. Rows with more “+” symbols indicate higher criticality of the corresponding challenge, while columns with more “+” symbols show higher importance of the associated quality aspect.
+        </figcaption>
+        <div class="table-wrapper">
+            <table id="challengeTable">
+                <thead>
+                    <tr>
+                        <th>Challenge ID</th>
+                        <th>Challenge Description</th>
+                        <th>Safety</th>
+                        <th>Performance</th>
+                        <th>Reliability</th>
+                        <th>Explainability</th>
+                        <th>Privacy</th>
+                        <th>Adaptability</th>
+                        <th>Security</th>
+                        <th>Criticality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="section-header"><td colspan="10">Requirements Engineering</td></tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-1</td>
+                        <td class="desc-cell">Handling runtime requirement updates while ensuring system consistency and safety.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-2</td>
+                        <td class="desc-cell">Balancing conflicting requirements.</td>
+                        <td></td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-3</td>
+                        <td class="desc-cell">Ensuring traceability of requirements and scalability of verification and validation activities.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-4</td>
+                        <td class="desc-cell">Eliciting requirements due to diverse stakeholders and the nature of robotics applications.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-5</td>
+                        <td class="desc-cell">Integrating ethical requirements into SRE processes.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">NR-Ch-1</td>
+                        <td class="desc-cell">Assuring that the robot meets all normative requirements upon initial deployment, and continuously satisfies norms while working in uncertain, evolving scenarios.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">NR-Ch-2</td>
+                        <td class="desc-cell">Providing clear explanations for norm-sensitive decisions.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td></td><td></td><td></td>
+                        <td><span class="badge">1</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="section-header"><td colspan="10">Software Design</td></tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-1</td>
+                        <td class="desc-cell">Scalable and modular architectures that balance flexibility and efficiency while supporting continuous adaptation across diverse platforms.</td>
+                        <td></td><td class="mark">+</td><td></td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-2</td>
+                        <td class="desc-cell">Managing trade-offs between adaptability, safety, and performance so that reliability is preserved without degrading system behaviour.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-3</td>
+                        <td class="desc-cell">Safe runtime evolution and reconfiguration with consistency and fault tolerance during software updates in operation.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-4</td>
+                        <td class="desc-cell">Handling uncertainty introduced by AI-driven adaptation, including mitigating unpredictability and ensuring trustworthiness.</td>
+                        <td></td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-5</td>
+                        <td class="desc-cell">Keeping runtime models consistent with design-time models to support lifecycle adaptation in MDE workflows.</td>
+                        <td></td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-6</td>
+                        <td class="desc-cell">Human-in-the-loop adaptation with interfaces and processes that minimise cognitive load and enable effective collaboration.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-7</td>
+                        <td class="desc-cell">Verification and validation techniques suited to highly dynamic and safety-critical self-adaptive software.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+
+                    
+                    <tr class="section-header"><td colspan="10">Software Design: Model-Driven Engineering</td></tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-1</td>
+                        <td class="desc-cell">Lack of a formal standard for self-adaptive architectures (e.g., MAPE-K), hindering traceability between models and code.</td>
+                        <td></td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-2</td>
+                        <td class="desc-cell">Limited support for automated code generation that reflects adaptation-specific semantics.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-3</td>
+                        <td class="desc-cell">Need for hybrid reasoning that combines software with models of hardware and environment.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-4</td>
+                        <td class="desc-cell">Insufficient integration of AI components into MDE frameworks.</td>
+                        <td></td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-5</td>
+                        <td class="desc-cell">Limited treatment of human and ethical factors in adaptation decisions.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="10">Software Design: Simulation</td></tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-1</td>
+                        <td class="desc-cell">Compact representation of scenario ranges for adaptive simulations.</td>
+                        <td></td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-2</td>
+                        <td class="desc-cell">Coupling heterogeneous subsystem simulations to form a composite simulation.</td>
+                        <td></td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-3</td>
+                        <td class="desc-cell">Orchestration algorithms that can dynamically adapt to system reconfiguration.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-4</td>
+                        <td class="desc-cell">Co-simulation interfaces often lack the richness required to capture multi-rate and hybrid dynamics.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-5</td>
+                        <td class="desc-cell">Protection of intellectual property when coupling externally provided subsystem models.</td>
+                        <td></td><td></td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+
+                    
+                    <tr class="section-header"><td colspan="10">Software Development</td></tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-1</td>
+                        <td class="desc-cell">Ensuring effective integration and compatibility between various hardware and software components from different vendors.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-2</td>
+                        <td class="desc-cell">Adapting to continuously evolving hardware and software without rebuilding existing architectures.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-3</td>
+                        <td class="desc-cell">Developing real-time sensor fusion to integrate diverse sensor data.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-4</td>
+                        <td class="desc-cell">Developing robotic software in an energy-efficient manner and providing sustainable operations in real environments.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-5</td>
+                        <td class="desc-cell">Ensuring privacy, data security, and robustness against cyberattacks at runtime.</td>
+                        <td class="mark">+</td><td></td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="10">Software Testing</td></tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-1</td>
+                        <td class="desc-cell">Bridging the reality gap in simulation-based testing to ensure realistic yet cost-effective testing.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-2</td>
+                        <td class="desc-cell">Testing the interactions between AI and non-AI components, while considering uncertainty and ethical concerns.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-3</td>
+                        <td class="desc-cell">Testing SAR software in the presence of uncertainty.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-4</td>
+                        <td class="desc-cell">Ensuring the correctness of individual MAPE-K components and the overall loop during testing.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-5</td>
+                        <td class="desc-cell">Real-time testing of digital twins, while accounting for synchronisation delays with physical systems.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-6</td>
+                        <td class="desc-cell">Developing cost-effective regression testing methods to support the continuous evolution of SAR.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-7</td>
+                        <td class="desc-cell">Testing robustness and reliability of robotic foundation models.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-8</td>
+                        <td class="desc-cell">Ensuring resilience against adversarial threats, such as prompt-based and perception-based attacks.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+
+                    
+                    <tr class="section-header"><td colspan="10">Operations</td></tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-1</td>
+                        <td class="desc-cell">Overlapping model state estimation.</td>
+                        <td></td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-2</td>
+                        <td class="desc-cell">Uncertainty as first-class citizen in MAPLE-K Loops.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-3</td>
+                        <td class="desc-cell">Active uncertainty reduction.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-4</td>
+                        <td class="desc-cell">Dynamic software updating for SARs.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="10">Digital Twins</td></tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-1</td>
+                        <td class="desc-cell">Ensuring trustworthy predictions due to data quality and uncertainties from physical systems.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-2</td>
+                        <td class="desc-cell">Requires sufficient computing infrastructure to support timely predictions for decision-making.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-3</td>
+                        <td class="desc-cell">Determining the exact moment of state transitions in physical systems.</td>
+                        <td></td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-4</td>
+                        <td class="desc-cell">Composing DTs for collaborating robots.</td>
+                        <td></td><td></td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                        <td><span class="badge">2</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-5</td>
+                        <td class="desc-cell">Adapting DT models across all software engineering lifecycle phases with sufficient fidelity.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-6</td>
+                        <td class="desc-cell">Integrating complex subsystems in large-scale robotic DTs.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-7</td>
+                        <td class="desc-cell">Achieving a fully integrated, dynamic, and responsive DT representation of multidisciplinary robotic systems.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="10">Artificial Intelligence</td></tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-1</td>
+                        <td class="desc-cell">Gathering sufficient data for self-adaptation in AI-powered robotics is often expensive or infeasible.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-2</td>
+                        <td class="desc-cell">Retaining previously acquired knowledge while adapting to new data and avoiding catastrophic forgetting.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-3</td>
+                        <td class="desc-cell">Addressing AI overfitting to improve generalisation and prevent operational anomalies in self-adaptive robots.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td>
+                        <td><span class="badge">3</span></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-4</td>
+                        <td class="desc-cell">Ensuring trustworthiness in self-adaptive robots, including handling hallucinations, real-time uncertainty, and ethical concerns.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td>
+                        <td><span class="badge">5</span></td>
+                    </tr>
+                    
+                    
+                </tbody>
+                <tfoot>
+                    <tr class="footer-consistent">
+                        <td colspan="2">Quality Aspect Focus (Column Totals)</td>
+                        <td>27</td><td>18</td><td>43</td><td>15</td><td>6</td><td>40</td><td>5</td><td>-</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </figure>
+
+    <hr class="section-divider"> 
+    <figure class="table-container">
+        <figcaption class="table-caption">
+            <strong>Table 2:</strong> Mapping of all challenges in self-adaptive robotics (SAR) to their corresponding characteristics. Rows with more “+” symbols indicate relevance of the characteristic as part of the challenge.
+        </figcaption>
+        <div class="table-wrapper">
+            <table id="characteristicTable">
+                <thead>
+                    <tr>
+                        <th>Challenge ID</th>
+                        <th>Challenge Description</th>
+                        <th>Embodiment</th>
+                        <th>Physical Interaction</th>
+                        <th>Localised</th>
+                        <th>Heterogeneity</th>
+                        <th>Distributed Nature</th>
+                        <th>Modularity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="section-header"><td colspan="8">Requirements Engineering</td></tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-1</td>
+                        <td class="desc-cell">Handling runtime requirement updates while ensuring system consistency and safety.</td>
+                        <td></td><td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-2</td>
+                        <td class="desc-cell">Balancing conflicting requirements.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-3</td>
+                        <td class="desc-cell">Ensuring traceability of requirements and scalability of verification and validation activities.</td>
+                        <td></td><td></td><td></td><td></td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-4</td>
+                        <td class="desc-cell">Eliciting requirements due to diverse stakeholders and the nature of robotics applications.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SRE-Ch-5</td>
+                        <td class="desc-cell">Integrating ethical requirements into SRE processes.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">NR-Ch-1</td>
+                        <td class="desc-cell">Assuring that the robot meets all normative requirements upon initial deployment, and continuously satisfies norms while working in uncertain, evolving scenarios.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">NR-Ch-2</td>
+                        <td class="desc-cell">Providing clear explanations for norm-sensitive decisions.</td>
+                        <td></td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Software Design</td></tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-1</td>
+                        <td class="desc-cell">Scalable and modular architectures that balance flexibility and efficiency while supporting continuous adaptation across diverse platforms.</td>
+                        <td></td><td></td><td></td><td></td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-2</td>
+                        <td class="desc-cell">Managing trade-offs between adaptability, safety, and performance so that reliability is preserved without degrading system behaviour.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-3</td>
+                        <td class="desc-cell">Safe runtime evolution and reconfiguration with consistency and fault tolerance during software updates in operation.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-4</td>
+                        <td class="desc-cell">Handling uncertainty introduced by AI-driven adaptation, including mitigating unpredictability and ensuring trustworthiness.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-5</td>
+                        <td class="desc-cell">Keeping runtime models consistent with design-time models to support lifecycle adaptation in MDE workflows.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-6</td>
+                        <td class="desc-cell">Human-in-the-loop adaptation with interfaces and processes that minimise cognitive load and enable effective collaboration.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">SD-Ch-7</td>
+                        <td class="desc-cell">Verification and validation techniques suited to highly dynamic and safety-critical self-adaptive software.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Software Design: Model-Driven Engineering</td></tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-1</td>
+                        <td class="desc-cell">Lack of a formal standard for self-adaptive architectures (e.g., MAPE-K), hindering traceability between models and code.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-2</td>
+                        <td class="desc-cell">Limited support for automated code generation that reflects adaptation-specific semantics.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-3</td>
+                        <td class="desc-cell">Need for hybrid reasoning that combines software with models of hardware and environment.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-4</td>
+                        <td class="desc-cell">Insufficient integration of AI components into MDE frameworks.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">MDE-Ch-5</td>
+                        <td class="desc-cell">Limited treatment of human and ethical factors in adaptation decisions.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Software Design: Simulation</td></tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-1</td>
+                        <td class="desc-cell">Compact representation of scenario ranges for adaptive simulations.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-2</td>
+                        <td class="desc-cell">Coupling heterogeneous subsystem simulations to form a composite simulation.</td>
+                        <td></td><td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-3</td>
+                        <td class="desc-cell">Orchestration algorithms that can dynamically adapt to system reconfiguration.</td>
+                        <td></td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-4</td>
+                        <td class="desc-cell">Co-simulation interfaces often lack the richness required to capture multi-rate and hybrid dynamics.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Sim-Ch-5</td>
+                        <td class="desc-cell">Protection of intellectual property when coupling externally provided subsystem models.</td>
+                        <td class="mark">+</td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Software Development</td></tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-1</td>
+                        <td class="desc-cell">Ensuring effective integration and compatibility between various hardware and software components from different vendors.</td>
+                        <td class="mark">+</td><td></td><td></td><td></td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-2</td>
+                        <td class="desc-cell">Adapting to continuously evolving hardware and software without rebuilding existing architectures.</td>
+                        <td class="mark">+</td><td></td><td></td><td></td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-3</td>
+                        <td class="desc-cell">Developing real-time sensor fusion to integrate diverse sensor data.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-4</td>
+                        <td class="desc-cell">Developing robotic software in an energy-efficient manner and providing sustainable operations in real environments.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Dev-Ch-5</td>
+                        <td class="desc-cell">Ensuring privacy, data security, and robustness against cyberattacks at runtime.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Software Testing</td></tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-1</td>
+                        <td class="desc-cell">Bridging the reality gap in simulation-based testing to ensure realistic yet cost-effective testing.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-2</td>
+                        <td class="desc-cell">Testing the interactions between AI and non-AI components, while considering uncertainty and ethical concerns.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-3</td>
+                        <td class="desc-cell">Testing SAR software in the presence of uncertainty.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-4</td>
+                        <td class="desc-cell">Ensuring the correctness of individual MAPE-K components and the overall loop during testing.</td>
+                        <td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-5</td>
+                        <td class="desc-cell">Real-time testing of digital twins, while accounting for synchronisation delays with physical systems.</td>
+                        <td></td><td class="mark">+</td><td></td><td class="mark">+</td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-6</td>
+                        <td class="desc-cell">Developing cost-effective regression testing methods to support the continuous evolution of SAR.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-7</td>
+                        <td class="desc-cell">Testing robustness and reliability of robotic foundation models.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">ST-Ch-8</td>
+                        <td class="desc-cell">Ensuring resilience against adversarial threats, such as prompt-based and perception-based attacks.</td>
+                        <td class="mark">+</td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Operations</td></tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-1</td>
+                        <td class="desc-cell">Overlapping model state estimation.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-2</td>
+                        <td class="desc-cell">Uncertainty as first-class citizen in MAPLE-K Loops.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-3</td>
+                        <td class="desc-cell">Active uncertainty reduction.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">Op-Ch-4</td>
+                        <td class="desc-cell">Dynamic software updating for SARs.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td class="mark">+</td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Digital Twins</td></tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-1</td>
+                        <td class="desc-cell">Ensuring trustworthy predictions due to data quality and uncertainties from physical systems.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-2</td>
+                        <td class="desc-cell">Requires sufficient computing infrastructure to support timely predictions for decision-making.</td>
+                        <td></td><td class="mark">+</td><td class="mark">+</td><td></td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-3</td>
+                        <td class="desc-cell">Determining the exact moment of state transitions in physical systems.</td>
+                        <td></td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-4</td>
+                        <td class="desc-cell">Composing DTs for collaborating robots.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td class="mark">+</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-5</td>
+                        <td class="desc-cell">Adapting DT models across all software engineering lifecycle phases with sufficient fidelity.</td>
+                        <td class="mark">+</td><td></td><td></td><td class="mark">+</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-6</td>
+                        <td class="desc-cell">Integrating complex subsystems in large-scale robotic DTs.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">DT-Ch-7</td>
+                        <td class="desc-cell">Achieving a fully integrated, dynamic, and responsive DT representation of multidisciplinary robotic systems.</td>
+                        <td></td><td></td><td></td><td class="mark">+</td><td class="mark">+</td><td class="mark">+</td>
+                    </tr>
+
+                    <tr class="section-header"><td colspan="8">Artificial Intelligence</td></tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-1</td>
+                        <td class="desc-cell">Gathering sufficient data for self-adaptation in AI-powered robotics is often expensive or infeasible.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-2</td>
+                        <td class="desc-cell">Retaining previously acquired knowledge while adapting to new data and avoiding catastrophic forgetting.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-3</td>
+                        <td class="desc-cell">Addressing AI overfitting to improve generalisation and prevent operational anomalies in self-adaptive robots.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">AI-Ch-4</td>
+                        <td class="desc-cell">Ensuring trustworthiness in self-adaptive robots, including handling hallucinations, real-time uncertainty, and ethical concerns.</td>
+                        <td class="mark">+</td><td class="mark">+</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </figure>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section funding">
+                <p>
+                    Work supported by the 
+                    <a href="https://robosapiens-eu.tech/" target="_blank" class="project-link">RoboSAPIENS</a> 
+                    project, funded through Horizon Europe Grant No. 101133807.
+                </p>
+                <p class="copyright-text">
+                    © 2026 <strong>Hassan Sartaj</strong> | Simula Research Laboratory, Oslo, Norway
+                </p>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-section license">
+                <p>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                        <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+                    </a>
+                    Licensed under 
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                        CC Attribution 4.0 International
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('tableSearch').addEventListener('keyup', function() {
+        let filter = this.value.toLowerCase();
+        // Selects all table bodies to handle multiple tables
+        let tbodies = document.querySelectorAll('table tbody');
+
+        tbodies.forEach(tbody => {
+            let rows = tbody.querySelectorAll('tr');
+            let currentSectionHeader = null;
+            let sectionHasResults = false;
+
+            rows.forEach(row => {
+                if (row.classList.contains('section-header')) {
+                    // Before moving to a new section, check if the previous section needs to be hidden
+                    if (currentSectionHeader && !sectionHasResults && filter !== "") {
+                        currentSectionHeader.style.display = 'none';
+                    }
+                    
+                    currentSectionHeader = row;
+                    sectionHasResults = false;
+                    row.style.display = ''; // Show header by default
+                } else {
+                    let text = row.textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        row.style.display = '';
+                        sectionHasResults = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+
+            // Clean up the very last section header of the current table
+            if (currentSectionHeader && !sectionHasResults && filter !== "") {
+                currentSectionHeader.style.display = 'none';
+            } else if (filter === "") {
+                // Reset all rows if search is cleared
+                rows.forEach(r => r.style.display = '');
+            }
+        });
+    });
+
+    function copyBibTeX() {
+        const bib = `@misc{sartaj2025softwareengineeringselfadaptiverobotics,
+    title={Software Engineering for Self-Adaptive Robotics: A Research Agenda}, 
+    author={Hassan Sartaj and Shaukat Ali and Ana Cavalcanti and Lukas Esterle and Cláudio Gomes and Peter Gorm Larsen and Anastasios Tefas and Jim Woodcock and Houxiang Zhang},
+    year={2025},
+    eprint={2505.19629},
+    archivePrefix={arXiv},
+    primaryClass={cs.SE},
+    url={https://arxiv.org/abs/2505.19629}
+    }`;
+            navigator.clipboard.writeText(bib).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.innerText = 'Copied!';
+                setTimeout(() => { btn.innerText = 'Copy BibTeX'; }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>

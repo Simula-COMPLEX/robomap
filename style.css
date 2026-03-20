@@ -1,0 +1,335 @@
+:root {
+    --primary-teal: #14b8a6;
+    --dark-teal: #0d9488;
+    --light-teal: #f0fdfa;
+    --text-dark: #1e293b;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header { text-align: center; margin-bottom: 40px; }
+h1 { color: var(--dark-teal); font-weight: 800; font-size: 2rem; margin-bottom: 8px; }
+h2 { color: var(--primary-teal); font-weight: 400; font-size: 1.1rem; margin-top: 0; }
+
+.intro-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 950px;
+    margin: 25px auto;
+    border-top: 4px solid var(--primary-teal);
+}
+
+.intro-text {
+    text-align: justify;
+    border-left: 4px solid var(--primary-teal);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+/* Search Box Styling */
+.search-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#tableSearch {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#tableSearch:focus {
+    border-color: var(--primary-teal);
+}
+
+.citation-box {
+    margin-top: 15px;
+    background: var(--light-teal);
+    padding: 18px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.cite-label {
+    display: block;
+    font-weight: bold;
+    color: var(--dark-teal);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+}
+
+.paper-link { color: var(--dark-teal); font-weight: 700; text-decoration: none; }
+.paper-link:hover { text-decoration: underline; }
+
+.table-wrapper {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+}
+
+/* Header & Footer - MATCHING STYLES & STABLE */
+thead, .footer-consistent {
+    background-color: var(--dark-teal) !important;
+    color: var(--white) !important;
+    pointer-events: none; /* Disables unreadable hover states */
+}
+
+th, .footer-consistent td {
+    padding: 16px 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.footer-consistent td {
+    border-top: 2px solid var(--white);
+    font-size: 0.9rem;
+}
+
+/* Body Styling */
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+tr:hover { background-color: #f9fafb; transition: 0.2s; }
+
+.section-header {
+    background-color: var(--light-teal);
+    color: var(--dark-teal);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.section-header td {
+    padding: 12px 20px;
+    text-align: left !important;
+    border-bottom: 2px solid var(--primary-teal);
+}
+
+.id-cell { font-family: monospace; font-weight: bold; color: var(--dark-teal); text-align: left !important; }
+.desc-cell { text-align: left !important; width: 32%; color: #334155; }
+
+.mark { color: var(--primary-teal); font-weight: 900; font-size: 1.1rem; }
+
+.badge {
+    background: var(--dark-teal);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.6rem; }
+    .container { padding: 20px 10px; }
+}
+
+/* Reference Styling */
+.cite-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ref-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.copy-btn {
+    background: var(--dark-teal);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.copy-btn:hover { background: var(--primary-teal); }
+
+.paper-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--dark-teal);
+    font-weight: 600;
+    border: 1px solid var(--primary-teal);
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.paper-link:hover {
+    background: var(--primary-teal);
+    color: white;
+}
+
+/* License Footer */
+
+.page-license {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.page-license a {
+    color: var(--dark-teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-license img {
+    vertical-align: middle;
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+/* Container for the entire table unit */
+.table-container {
+    margin: 40px 0;
+    padding: 0;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Styling the Table Caption (Top-aligned like LaTeX) */
+.table-caption {
+    text-align: left;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    padding: 0 5px;
+    border-left: 4px solid var(--primary-teal); /* Adds a nice teal accent */
+    padding-left: 15px;
+}
+
+.table-caption strong {
+    color: var(--dark-teal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Horizontal Divider between tables */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(20, 184, 166, 0.4), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* Ensure the wrapper handles the scroll without cutting off the shadow */
+.table-wrapper {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow-x: auto;
+    background: white;
+}
+
+/* Site Footer Styles */
+.site-footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-section p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+/* Funding & Project Links */
+.project-link {
+    color: var(--dark-teal);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.project-link:hover {
+    border-color: var(--dark-teal);
+}
+
+.copyright-text {
+    color: var(--text-muted);
+    font-size: 0.85rem !important;
+    margin-top: 12px !important;
+}
+
+/* Divider */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    margin: 10px auto;
+    width: 50%;
+}
+
+/* License Section */
+.license img {
+    vertical-align: middle;
+    margin-bottom: 3px;
+    opacity: 0.9;
+}
+
+.license a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.license a:hover {
+    color: var(--dark-teal);
+}
